@@ -217,70 +217,81 @@
     </section>
 
     <!-- SECTION 5: PROJECTS -->
-        <!-- PROJECT CARD: BeeHive Online App (FIXED SIZE & CROPPED) -->
+        <!-- PROJECT CARD: BeeHive Online App (CUSTOM 4-COLUMN LAYOUT) -->
 <div class="rounded-2xl p-6 border-2 card-glow bg-black/40 backdrop-blur-md transition-transform hover:-translate-y-2 lg:col-span-3">
     <h3 class="text-3xl font-bold mb-4 glow-text text-center">BeeHive Online - Campus Delivery App</h3>
     <p class="opacity-80 text-center mb-6 max-w-2xl mx-auto">
         Aplikasi pemesanan kebutuhan kampus (makanan, minuman, & essentials) yang dikirim langsung ke kamar/lantai asrama, lengkap dengan sistem manajemen pesanan khusus karyawan (*Order Bulletin*).
     </p>
 
-    <!-- Grid Preview Alur Aplikasi -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <!-- Grid Layout 4 Kolom Sesuai Sketsa -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         
-        <!-- 1. Welcome Screen -->
-        <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
-            <div class="h-64 w-full rounded-lg overflow-hidden mb-3 bg-gray-900">
-                <img src="bee-welcome.jpeg" alt="Welcome Screen" class="w-full h-full object-cover object-top">
+        <!-- KOLOM 1: Welcome & Login (2 Gambar Vertikal) -->
+        <div class="flex flex-col gap-4">
+            <!-- 1. Welcome Screen -->
+            <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
+                <div class="h-52 w-full rounded-lg overflow-hidden mb-2 bg-gray-900">
+                    <img src="bee-welcome.jpeg" alt="Welcome Screen" class="w-full h-full object-cover object-top">
+                </div>
+                <span class="text-xs font-semibold glow-text text-center">1. Welcome Screen</span>
             </div>
-            <span class="text-sm font-semibold glow-text text-center">1. Welcome Screen</span>
+
+            <!-- 2. Login Page -->
+            <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
+                <div class="h-52 w-full rounded-lg overflow-hidden mb-2 bg-gray-900">
+                    <img src="bee-login.jpeg" alt="Login Page" class="w-full h-full object-cover object-top">
+                </div>
+                <span class="text-xs font-semibold glow-text text-center">2. Login Page</span>
+            </div>
         </div>
 
-        <!-- 2. Log In -->
-        <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
-            <div class="h-64 w-full rounded-lg overflow-hidden mb-3 bg-gray-900">
-                <img src="bee-login.jpeg" alt="Log In" class="w-full h-full object-cover object-top">
+        <!-- KOLOM 2: Signup & Menu (2 Gambar Vertikal) -->
+        <div class="flex flex-col gap-4">
+            <!-- 3. Create Account -->
+            <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
+                <div class="h-52 w-full rounded-lg overflow-hidden mb-2 bg-gray-900">
+                    <img src="bee-signup.jpeg" alt="Create Account" class="w-full h-full object-cover object-top">
+                </div>
+                <span class="text-xs font-semibold glow-text text-center">3. Create Account</span>
             </div>
-            <span class="text-sm font-semibold glow-text text-center">2. Login Page</span>
+
+            <!-- 4. Product Menu -->
+            <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
+                <div class="h-52 w-full rounded-lg overflow-hidden mb-2 bg-gray-900">
+                    <img src="bee-menu.jpeg" alt="Product Menu" class="w-full h-full object-cover object-top">
+                </div>
+                <span class="text-xs font-semibold glow-text text-center">4. Product Menu</span>
+            </div>
         </div>
 
-        <!-- 3. Create Account -->
-        <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
-            <div class="h-64 w-full rounded-lg overflow-hidden mb-3 bg-gray-900">
-                <img src="bee-signup.jpeg" alt="Create Account" class="w-full h-full object-cover object-top">
+        <!-- KOLOM 3: Cart & Completed (2 Gambar Vertikal) -->
+        <div class="flex flex-col gap-4">
+            <!-- 5. My Basket (Cart) -->
+            <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
+                <div class="h-52 w-full rounded-lg overflow-hidden mb-2 bg-gray-900">
+                    <img src="bee-cart.jpeg" alt="My Basket" class="w-full h-full object-cover object-top">
+                </div>
+                <span class="text-xs font-semibold glow-text text-center">5. My Basket (Cart)</span>
             </div>
-            <span class="text-sm font-semibold glow-text text-center">3. Create Account</span>
+
+            <!-- 6. Completed Orders -->
+            <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
+                <div class="h-52 w-full rounded-lg overflow-hidden mb-2 bg-gray-900">
+                    <img src="bee-completed.jpeg" alt="Completed Orders" class="w-full h-full object-cover object-top">
+                </div>
+                <span class="text-xs font-semibold glow-text text-center">6. Completed Orders</span>
+            </div>
         </div>
 
-        <!-- 4. Main Menu -->
-        <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
-            <div class="h-64 w-full rounded-lg overflow-hidden mb-3 bg-gray-900">
-                <img src="bee-menu.jpeg" alt="Main Menu" class="w-full h-full object-cover object-top">
+        <!-- KOLOM 4: Order Bulletin (1 Gambar Panjang Full ke Bawah) -->
+        <div class="flex flex-col">
+            <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center h-full">
+                <div class="flex-1 w-full rounded-lg overflow-hidden mb-2 bg-gray-900 min-h-[440px]">
+                    <img src="bee-bulletin.jpeg" alt="Order Bulletin" class="w-full h-full object-cover object-top">
+                </div>
+                <span class="text-xs font-semibold glow-text text-center">7. Order Bulletin (Staff Panel)</span>
             </div>
-            <span class="text-sm font-semibold glow-text text-center">4. Product Menu</span>
-        </div>
-
-        <!-- 5. Basket / Cart -->
-        <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
-            <div class="h-64 w-full rounded-lg overflow-hidden mb-3 bg-gray-900">
-                <img src="bee-cart.jpeg" alt="My Basket" class="w-full h-full object-cover object-top">
-            </div>
-            <span class="text-sm font-semibold glow-text text-center">5. My Basket (Cart)</span>
-        </div>
-
-        <!-- 6. Completed Orders -->
-        <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center">
-            <div class="h-64 w-full rounded-lg overflow-hidden mb-3 bg-gray-900">
-                <img src="bee-completed.jpeg" alt="Completed Orders" class="w-full h-full object-cover object-top">
-            </div>
-            <span class="text-sm font-semibold glow-text text-center">6. Completed Orders</span>
-        </div>
-
-        <!-- 7. Order Bulletin (Karyawan) - Dibuat pas dan dicrop agar tidak terlalu besar -->
-        <div class="rounded-xl p-3 border card-glow bg-black/60 flex flex-col items-center sm:col-span-2 md:col-span-2 lg:col-span-2">
-            <div class="h-64 w-full rounded-lg overflow-hidden mb-3 bg-gray-900">
-                <img src="bee-bulletin.jpeg" alt="Order Bulletin" class="w-full h-full object-cover object-top">
-            </div>
-            <span class="text-sm font-semibold glow-text text-center">7. Order Bulletin (Staff Panel)</span>
         </div>
 
     </div>
