@@ -35,6 +35,30 @@
             border-color: var(--primary-text);
             box-shadow: 0 0 calc(var(--glow-intensity) * 0.4) var(--glow-color);
         }
+
+        /* Animasi Infinite Marquee untuk Slider Desain */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 35s linear infinite;
+        }
+
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        /* Efek Zoom saat Hover */
+        .slider-item img {
+            transition: transform 0.5s ease;
+        }
+        .slider-item:hover img {
+            transform: scale(1.08);
+        }
     </style>
 </head>
 <body class="relative">
@@ -103,29 +127,37 @@
             <p class="text-lg opacity-80 glow-text">Select a category below to jump directly to the detailed works.</p>
         </div>
 
-        <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-3 gap-8">
-            <a href="#video" class="p-8 rounded-3xl border-2 card-glow bg-transparent flex flex-col items-center text-center transition-all hover:scale-105">
-                <div class="w-16 h-16 rounded-full border-2 border-current flex items-center justify-center text-2xl mb-6 glow-text">
+        <div class="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <a href="#video" class="p-6 rounded-3xl border-2 card-glow bg-transparent flex flex-col items-center text-center transition-all hover:scale-105">
+                <div class="w-14 h-14 rounded-full border-2 border-current flex items-center justify-center text-xl mb-4 glow-text">
                     <i class="fas fa-video"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-2 glow-text">Video Projects</h3>
-                <p class="text-sm opacity-90">Cinematic edits, montages, and visual storytelling works.</p>
+                <h3 class="text-xl font-bold mb-1 glow-text">Video Projects</h3>
+                <p class="text-xs opacity-90">Short-form reels & cinematic edits.</p>
             </a>
 
-            <a href="#design" class="p-8 rounded-3xl border-2 card-glow bg-transparent flex flex-col items-center text-center transition-all hover:scale-105">
-                <div class="w-16 h-16 rounded-full border-2 border-current flex items-center justify-center text-2xl mb-6 glow-text">
+            <a href="#design" class="p-6 rounded-3xl border-2 card-glow bg-transparent flex flex-col items-center text-center transition-all hover:scale-105">
+                <div class="w-14 h-14 rounded-full border-2 border-current flex items-center justify-center text-xl mb-4 glow-text">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-1 glow-text">UI/UX Design</h3>
+                <p class="text-xs opacity-90">App wireframes & mobile interfaces.</p>
+            </a>
+
+            <a href="#graphic" class="p-6 rounded-3xl border-2 card-glow bg-transparent flex flex-col items-center text-center transition-all hover:scale-105">
+                <div class="w-14 h-14 rounded-full border-2 border-current flex items-center justify-center text-xl mb-4 glow-text">
                     <i class="fas fa-image"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-2 glow-text">Creative Design</h3>
-                <p class="text-sm opacity-90">Digital illustrations, concepts, and image manipulations.</p>
+                <h3 class="text-xl font-bold mb-1 glow-text">Graphic & Posters</h3>
+                <p class="text-xs opacity-90">Visual art, posters & photo edits.</p>
             </a>
 
-            <a href="#projects" class="p-8 rounded-3xl border-2 card-glow bg-transparent flex flex-col items-center text-center transition-all hover:scale-105">
-                <div class="w-16 h-16 rounded-full border-2 border-current flex items-center justify-center text-2xl mb-6 glow-text">
+            <a href="#projects" class="p-6 rounded-3xl border-2 card-glow bg-transparent flex flex-col items-center text-center transition-all hover:scale-105">
+                <div class="w-14 h-14 rounded-full border-2 border-current flex items-center justify-center text-xl mb-4 glow-text">
                     <i class="fas fa-folder"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-2 glow-text">Projects</h3>
-                <p class="text-sm opacity-90">Technical builds, code repositories, and system apps.</p>
+                <h3 class="text-xl font-bold mb-1 glow-text">Projects</h3>
+                <p class="text-xs opacity-90">Technical builds & system apps.</p>
             </a>
         </div>
     </section>
@@ -145,81 +177,201 @@
                 <div class="p-6 rounded-3xl border-2 card-glow bg-transparent flex flex-col justify-between h-80 transition-all hover:scale-105">
                     <div class="flex justify-between items-center">
                         <i class="fas fa-video text-3xl opacity-85 glow-text"></i>
+                        <span class="text-xs uppercase tracking-wider font-bold opacity-70">Shorts / Reels</span>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold mb-2 glow-text">Full Video</h3>
-                        <p class="opacity-90 text-sm">Atmospheric storytelling, color grading, meme, and long-duration video projects.</p>
+                        <h3 class="text-2xl font-bold mb-2 glow-text">Short Form Edits</h3>
+                        <p class="opacity-90 text-sm">Dynamic pacing and quick-cut montage optimized for vertical screens.</p>
                     </div>
                     <a href="https://www.instagram.com/dhckkk?stkn=MTc3bDlzdTlhZXZudg==" target="_blank" class="inline-flex items-center space-x-2 font-semibold text-sm hover:underline glow-text">
-                        <span>Watch Video</span> <i class="fas fa-arrow-right text-xs"></i>
+                        <span>Watch Shorts</span> <i class="fas fa-arrow-right text-xs"></i>
                     </a>
                 </div>
 
                 <div class="p-6 rounded-3xl border-2 card-glow bg-transparent flex flex-col justify-between h-80 transition-all hover:scale-105">
                     <div class="flex justify-between items-center">
-                        <i class="fas fa-video text-3xl opacity-85 glow-text"></i>
-                        <span class="text-xs uppercase tracking-wider font-bold opacity-70"></span>
+                        <i class="fas fa-film text-3xl opacity-85 glow-text"></i>
+                        <span class="text-xs uppercase tracking-wider font-bold opacity-70">Long Form</span>
                     </div>
                     <div>
-                        <span class="text-xs uppercase tracking-wider font-bold opacity-70">Short & Rells</span>
-                        <h3 class="text-2xl font-bold mb-2 glow-text">Short Form Edits</h3>
-                        <p class="opacity-90 text-sm">Dynamic pacing and quick-cut for vertical screens.</p>
+                        <h3 class="text-2xl font-bold mb-2 glow-text">Cinematic & Full Video</h3>
+                        <p class="opacity-90 text-sm">Atmospheric storytelling, color grading, and long-duration video projects.</p>
                     </div>
                     <a href="https://www.instagram.com/dhckkk?stkn=MTc3bDlzdTlhZXZudg==" target="_blank" class="inline-flex items-center space-x-2 font-semibold text-sm hover:underline glow-text">
-                        <span>Watch Video</span> <i class="fas fa-arrow-right text-xs"></i>
+                        <span>Watch Full Video</span> <i class="fas fa-arrow-right text-xs"></i>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 4: CREATIVE DESIGN -->
+    <!-- SECTION 4: UI/UX DESIGN (BiFood & Hahay Pay) -->
     <section id="design" class="min-h-screen flex flex-col items-center justify-center px-6 py-20">
         <div class="max-w-6xl w-full">
             <div class="mb-8 flex justify-between items-end">
                 <div>
-                    <h2 class="text-4xl lg:text-5xl font-extrabold glow-text mb-2">Creative Design</h2>
-                    <p class="text-lg opacity-80 glow-text">Explore character design, custom posters, and digital art.</p>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold glow-text mb-2">UI/UX Design</h2>
+                    <p class="text-lg opacity-80 glow-text">Clean and functional app interface layouts, wireframes, and interactive user flows.</p>
                 </div>
                 <a href="#menu" class="text-sm font-semibold opacity-70 hover:opacity-100 transition-opacity glow-text hidden md:inline-block">Back to Top Menu ↑</a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-6 rounded-3xl border-2 card-glow bg-transparent flex flex-col justify-between h-80 transition-all hover:scale-105">
-                    <div class="flex justify-between items-center">
-                        <i class="fas fa-image text-3xl opacity-85 glow-text"></i>
-                        <span class="text-xs uppercase tracking-wider font-bold opacity-70">Interface</span>
-                    </div>
+                <!-- Proyek 1: BiFood -->
+                <div class="p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between transition-all hover:scale-105">
                     <div>
-                        <h3 class="text-2xl font-bold mb-2 glow-text">UI/UX Design</h3>
-                        <p class="opacity-90 text-sm">Clean and functional app interface layouts, focusing on user experience and visual hierarchy.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <i class="fas fa-utensils text-3xl opacity-85 glow-text"></i>
+                            <span class="text-xs uppercase tracking-wider font-bold opacity-70">Food Delivery App</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 glow-text">BiFood UI/UX Flow</h3>
+                        <p class="opacity-90 text-sm mb-4">
+                            Comprehensive food delivery mobile application design featuring detailed search categories, interactive prototype routing, and seamless user journeys.
+                        </p>
                     </div>
-                    <a href="https://www.instagram.com/dhckkk?stkn=MTc3bDlzdTlhZXZudg==" target="_blank" class="inline-flex items-center space-x-2 font-semibold text-sm hover:underline glow-text">
-                        <span>View Artwork</span> <i class="fas fa-arrow-right text-xs"></i>
-                    </a>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs font-semibold opacity-70 glow-text">Figma Prototype Design</span>
+                        <a href="https://www.figma.com/design/y06G0obLHGioZk0FcJ46Mm/bi-food?node-id=1-423&t=DqvSjRd7FERxDmdj-1" target="_blank" class="inline-flex items-center space-x-2 font-semibold text-sm hover:underline glow-text">
+                            <span>View Project</span> <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="p-6 rounded-3xl border-2 card-glow bg-transparent flex flex-col justify-between h-80 transition-all hover:scale-105">
-                    <div class="flex justify-between items-center">
-                        <i class="fas fa-image text-3xl opacity-85 glow-text"></i>
-                        <span class="text-xs uppercase tracking-wider font-bold opacity-70">Concept & Visual Art</span>
-                    </div>
+                <!-- Proyek 2: Hahay Pay -->
+                <div class="p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between transition-all hover:scale-105">
                     <div>
-                        <h3 class="text-2xl font-bold mb-2 glow-text">Graphic & Posters</h3>
-                        <p class="opacity-90 text-sm">Creative poster designs, digital image manipulation, and striking visual compositions.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <i class="fas fa-wallet text-3xl opacity-85 glow-text"></i>
+                            <span class="text-xs uppercase tracking-wider font-bold opacity-70">E-Wallet App</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 glow-text">Hahay Pay Mobile</h3>
+                        <p class="opacity-90 text-sm mb-4">
+                            Digital wallet and financial mobile interface layout focusing on security screens, secure PIN entry, card management dashboards, and transaction histories.
+                        </p>
                     </div>
-                    <a href="https://www.instagram.com/dhckkk?stkn=MTc3bDlzdTlhZXZudg==" target="_blank" class="inline-flex items-center space-x-2 font-semibold text-sm hover:underline glow-text">
-                        <span>View Artwork</span> <i class="fas fa-arrow-right text-xs"></i>
-                    </a>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                        <span class="text-xs font-semibold opacity-70 glow-text">Figma UI Architecture</span>
+                        <a href="https://www.figma.com/design/HuRAOyAPKpLDSrOPkHb6PH/Hahay-Pay?node-id=0-1&t=iHEFC1ajZ6qgK4wV-1" target="_blank" class="inline-flex items-center space-x-2 font-semibold text-sm hover:underline glow-text">
+                            <span>View Project</span> <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 5: PROJECTS -->
+    <!-- SECTION 5: GRAPHIC & POSTER DESIGN (Infinite Moving Slider) -->
+    <section id="graphic" class="min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
+        <div class="max-w-6xl w-full mb-8 flex justify-between items-end">
+            <div>
+                <h2 class="text-4xl lg:text-5xl font-extrabold glow-text mb-2">Graphic & Poster Design</h2>
+                <p class="text-lg opacity-80 glow-text">Visual art, cinematic poster compositions, and creative photo manipulations.</p>
+            </div>
+            <a href="#menu" class="text-sm font-semibold opacity-70 hover:opacity-100 transition-opacity glow-text hidden md:inline-block">Back to Top Menu ↑</a>
+        </div>
+
+        <!-- Container Slider Berjalan -->
+        <div class="w-full overflow-hidden relative py-6">
+            <div class="animate-marquee flex gap-6">
+                <!-- Group 1 Gambar -->
+                <div class="flex gap-6 shrink-0">
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('Binus@alamsutera.jpeg', 'Binus Alam Sutera')">
+                        <img src="Binus@alamsutera.jpeg" alt="Binus Alam Sutera" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">Binus Alam Sutera</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('yoda.jpeg', 'Master Yoda')">
+                        <img src="yoda.jpeg" alt="Master Yoda" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">Master Yoda</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('thumbnail.jpeg', 'Minecraft Skyblock')">
+                        <img src="thumbnail.jpeg" alt="Minecraft Skyblock Thumbnail" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">Minecraft Skyblock</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('anakain.jpeg', 'The Fallen Angel')">
+                        <img src="anakain.jpeg" alt="The Fallen Angel" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">The Fallen Angel</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('maul.jpeg', 'Darth Maul')">
+                        <img src="maul.jpeg" alt="Darth Maul" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">Darth Maul</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('strech.jpeg', 'Photo Stretch Effect')">
+                        <img src="strech.jpeg" alt="Manipulation Stretch" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">Photo Stretch Effect</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('mando.jpeg', 'The Mandalorian')">
+                        <img src="mando.jpeg" alt="The Mandalorian" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">The Mandalorian</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 2 Gambar (Duplikat untuk Infinite Loop yang Mulus) -->
+                <div class="flex gap-6 shrink-0" aria-hidden="true">
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('Binus@alamsutera.jpeg', 'Binus Alam Sutera')">
+                        <img src="Binus@alamsutera.jpeg" alt="Binus Alam Sutera" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">Binus Alam Sutera</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('yoda.jpeg', 'Master Yoda')">
+                        <img src="yoda.jpeg" alt="Master Yoda" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">Master Yoda</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('thumbnail.jpeg', 'Minecraft Skyblock')">
+                        <img src="thumbnail.jpeg" alt="Minecraft Skyblock Thumbnail" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">Minecraft Skyblock</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('anakain.jpeg', 'The Fallen Angel')">
+                        <img src="anakain.jpeg" alt="The Fallen Angel" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">The Fallen Angel</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('maul.jpeg', 'Darth Maul')">
+                        <img src="maul.jpeg" alt="Darth Maul" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">Darth Maul</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('strech.jpeg', 'Photo Stretch Effect')">
+                        <img src="strech.jpeg" alt="Manipulation Stretch" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">Photo Stretch Effect</span>
+                        </div>
+                    </div>
+                    <div class="slider-item w-72 h-[450px] rounded-2xl border-2 card-glow overflow-hidden bg-black/45 relative group cursor-pointer" onclick="openLightbox('mando.jpeg', 'The Mandalorian')">
+                        <img src="mando.jpeg" alt="The Mandalorian" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                            <span class="text-sm font-bold glow-text">The Mandalorian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-xs opacity-60 text-center mt-4">Tip: Arahkan kursor untuk menjeda animasi, dan klik pada gambar untuk memperbesar.</p>
+    </section>
+
+    <!-- SECTION 6: PROJECTS -->
     <section id="projects" class="min-h-screen flex flex-col items-center justify-center px-6 py-20">
         <div class="max-w-6xl w-full">
-            <!-- Judul Section Projects Ditambahkan di Sini -->
             <div class="mb-8 flex justify-between items-end">
                 <div>
                     <h2 class="text-4xl lg:text-5xl font-extrabold glow-text mb-2">Projects</h2>
@@ -240,13 +392,13 @@
                     <!-- KOLOM 1: Welcome & Main Menu -->
                     <div class="flex flex-col gap-6 items-center">
                         <div class="rounded-xl p-2 border card-glow bg-black/60 inline-flex flex-col items-center">
-                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900">
+                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900 cursor-pointer" onclick="openLightbox('bee-welcome.jpeg', 'Welcome Screen')">
                                 <img src="bee-welcome.jpeg" alt="Welcome Screen" class="h-full w-auto object-cover object-top">
                             </div>
                             <span class="text-xs font-semibold glow-text text-center">1. Welcome Screen</span>
                         </div>
                         <div class="rounded-xl p-2 border card-glow bg-black/60 inline-flex flex-col items-center">
-                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900">
+                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900 cursor-pointer" onclick="openLightbox('bee-menu.jpeg', 'Product Menu')">
                                 <img src="bee-menu.jpeg" alt="Product Menu" class="h-full w-auto object-cover object-top">
                             </div>
                             <span class="text-xs font-semibold glow-text text-center">4. Product Menu</span>
@@ -256,13 +408,13 @@
                     <!-- KOLOM 2: Create Account & Basket -->
                     <div class="flex flex-col gap-6 items-center">
                         <div class="rounded-xl p-2 border card-glow bg-black/60 inline-flex flex-col items-center">
-                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900">
+                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900 cursor-pointer" onclick="openLightbox('bee-signup.jpeg', 'Create Account')">
                                 <img src="bee-signup.jpeg" alt="Create Account" class="h-full w-auto object-cover object-top">
                             </div>
                             <span class="text-xs font-semibold glow-text text-center">3. Create Account</span>
                         </div>
                         <div class="rounded-xl p-2 border card-glow bg-black/60 inline-flex flex-col items-center">
-                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900">
+                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900 cursor-pointer" onclick="openLightbox('bee-cart.jpeg', 'My Basket')">
                                 <img src="bee-cart.jpeg" alt="My Basket" class="h-full w-auto object-cover object-top">
                             </div>
                             <span class="text-xs font-semibold glow-text text-center">5. My Basket (Cart)</span>
@@ -272,13 +424,13 @@
                     <!-- KOLOM 3: Login & Completed Orders -->
                     <div class="flex flex-col gap-6 items-center">
                         <div class="rounded-xl p-2 border card-glow bg-black/60 inline-flex flex-col items-center">
-                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900">
+                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900 cursor-pointer" onclick="openLightbox('bee-login.jpeg', 'Login Page')">
                                 <img src="bee-login.jpeg" alt="Login Page" class="h-full w-auto object-cover object-top">
                             </div>
                             <span class="text-xs font-semibold glow-text text-center">2. Login Page</span>
                         </div>
                         <div class="rounded-xl p-2 border card-glow bg-black/60 inline-flex flex-col items-center">
-                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900">
+                            <div class="h-64 w-auto rounded-lg overflow-hidden mb-2 bg-gray-900 cursor-pointer" onclick="openLightbox('bee-completed.jpeg', 'Completed Orders')">
                                 <img src="bee-completed.jpeg" alt="Completed Orders" class="h-full w-auto object-cover object-top">
                             </div>
                             <span class="text-xs font-semibold glow-text text-center">6. Completed Orders</span>
@@ -288,7 +440,7 @@
                     <!-- KOLOM 4: Order Bulletin (Staff Panel) -->
                     <div class="flex flex-col items-center">
                         <div class="rounded-xl p-2 border card-glow bg-black/60 inline-flex flex-col items-center">
-                            <div class="h-[544px] w-auto rounded-lg overflow-hidden mb-2 bg-gray-900">
+                            <div class="h-[544px] w-auto rounded-lg overflow-hidden mb-2 bg-gray-900 cursor-pointer" onclick="openLightbox('bee-bulletin.jpeg', 'Order Bulletin')">
                                 <img src="bee-bulletin.jpeg" alt="Order Bulletin" class="h-full w-auto object-cover object-top">
                             </div>
                             <span class="text-xs font-semibold glow-text text-center">7. Order Bulletin (Staff Panel)</span>
@@ -300,7 +452,44 @@
         </div>
     </section>
 
+    <!-- MODAL LIGHTBOX UNTUK MEMPERBESAR GAMBAR -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex flex-col items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 w-12 h-12 rounded-full border-2 card-glow bg-black/60 flex items-center justify-center text-xl hover:scale-110 transition-transform">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="max-w-4xl max-h-[80vh] flex flex-col items-center">
+            <img id="lightboxImg" src="" alt="Expanded View" class="max-h-[70vh] w-auto object-contain rounded-xl border-2 card-glow mb-4">
+            <h3 id="lightboxCaption" class="text-xl font-bold glow-text text-center"></h3>
+        </div>
+    </div>
+
     <!-- Hubungkan ke script.js -->
     <script src="script.js"></script>
+    <script>
+        // Fungsi Lightbox Modal untuk Preview Gambar
+        function openLightbox(imgSrc, captionText) {
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImg');
+            const caption = document.getElementById('lightboxCaption');
+            
+            img.src = imgSrc;
+            caption.textContent = captionText;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Matikan scroll background
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Nyalakan kembali scroll background
+        }
+
+        // Tutup modal jika area gelap di luar gambar diklik
+        document.getElementById('lightboxModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 </html>
