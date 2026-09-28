@@ -121,3 +121,58 @@
             window.location.href = `player.html?file=${encodedFile}&title=${encodedTitle}&size=${encodedSize}`;
         }
     </script>
+        // ==========================================
+        // EFEK JEJAK KURSOR (CURSOR TRAIL BOXES)
+        // ==========================================
+        const colors = ['#ff0000', '#ffff00', '#00ff00', '#0099ff', '#ffffff', '#ff00ff']; // Merah, Kuning, Hijau, Biru, Putih, Ungu
+        const trailCount = 12; // Jumlah kotak jejak
+        const trails = [];
+        
+        // Buat elemen kotak jejak secara dinamis
+        for (let i = 0; i < trailCount; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'fixed pointer-events-none z-50 rounded-sm transition-opacity duration-300';
+            dot.style.width = '10px';
+            dot.style.height = '10px';
+            dot.style.opacity = '0';
+            document.body.appendChild(dot);
+            trails.push({ element: dot, x: 0, y: 0 });
+        }
+        
+        let mouseX = 0;
+        let mouseY = 0;
+        
+        // Tangkap posisi kursor saat digerakkan
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        
+        // Animasi pergerakan jejak kotak
+        let currentX = 0;
+        let currentY = 0;
+        
+        function animateCursorTrail() {
+            let x = mouseX;
+            let y = mouseY;
+        
+            trails.forEach((trail, index) => {
+                const nextTrail = trails[index + 1] || trails[0];
+                
+                trail.x = x;
+                trail.y = y;
+        
+                trail.element.style.transform = `translate(${trail.x}px, ${trail.y}px)`;
+                trail.element.style.backgroundColor = colors[index % colors.length];
+                trail.element.style.boxShadow = `0 0 6px ${colors[index % colors.length]}`;
+                trail.element.style.opacity = (1 - index / trailCount) * 0.7; // Efek pudar di ujung
+        
+                x += (nextTrail.x - x) * 0.3;
+                y += (nextTrail.y - y) * 0.3;
+            });
+        
+            requestAnimationFrame(animateCursorTrail);
+        }
+        
+        // Jalankan animasi saat halaman dimuat
+        animateCursorTrail();
