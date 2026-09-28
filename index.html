@@ -163,179 +163,46 @@
     </section>
 
     <!-- SECTION 3: VIDEO PROJECTS -->
-    <section id="video" class="min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden">
-        <div class="max-w-6xl w-full mb-8 flex justify-between items-end">
-            <div>
-                <h2 class="text-4xl lg:text-5xl font-extrabold glow-text mb-2">Video Projects</h2>
-                <p class="text-lg opacity-80 glow-text">Showcase of group projects, edits, and cinematic video works.</p>
+    <section id="video" class="min-h-screen flex flex-col items-center justify-center px-6 py-20">
+        <div class="max-w-6xl w-full">
+            <div class="mb-8 flex justify-between items-end">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold glow-text mb-2">Video Projects</h2>
+                    <p class="text-lg opacity-80 glow-text">Showcase of vertical short-form edits and cinematic long-form videos.</p>
+                </div>
+                <a href="#menu" class="text-sm font-semibold opacity-70 hover:opacity-100 transition-opacity glow-text hidden md:inline-block">Back to Top Menu ↑</a>
             </div>
-            <a href="#menu" class="text-sm font-semibold opacity-70 hover:opacity-100 transition-opacity glow-text hidden md:inline-block">Back to Top Menu ↑</a>
-        </div>
 
-        <!-- Container Slider Berjalan (Marquee) untuk Video -->
-        <div class="w-full overflow-hidden relative py-6">
-            <div class="animate-marquee flex gap-6">
-                
-                <!-- Group 1 Kartu Video -->
-                <div class="flex gap-6 shrink-0">
-                    <!-- Video 1 -->
-                    <div onclick="openVideoPlayer('Video Kelompok 7.mp4', 'Video Kelompok 7', '430 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center">
-                            <i class="fas fa-video text-3xl opacity-85 glow-text"></i>
-                            <span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">430 MB</span>
-                        </div>
-                        <div class="my-4">
-                            <div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden">
-                                <div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110">
-                                    <i class="fas fa-play ml-1 glow-text"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1 glow-text">Video Kelompok 7</h3>
-                            <p class="opacity-90 text-xs">Collaborative assignment and presentation video project.</p>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 rounded-3xl border-2 card-glow bg-transparent flex flex-col justify-between h-80 transition-all hover:scale-105">
+                    <div class="flex justify-between items-center">
+                        <i class="fas fa-video text-3xl opacity-85 glow-text"></i>
+                        <span class="text-xs uppercase tracking-wider font-bold opacity-70">Shorts / Reels</span>
                     </div>
-
-                    <!-- Video 2 -->
-                    <div onclick="openVideoPlayer('New Project 86 [B6AD2B4].mp4', 'New Project 86', '26 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center">
-                            <i class="fas fa-film text-3xl opacity-85 glow-text"></i>
-                            <span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">26 MB</span>
-                        </div>
-                        <div class="my-4">
-                            <div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden">
-                                <div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110">
-                                    <i class="fas fa-play ml-1 glow-text"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1 glow-text">New Project 86</h3>
-                            <p class="opacity-90 text-xs">Dynamic cuts, transitions, and visual composition edit.</p>
-                        </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 glow-text">Short Form Edits</h3>
+                        <p class="opacity-90 text-sm">Dynamic pacing and quick-cut montage optimized for vertical screens.</p>
                     </div>
-
-                    <!-- Video 3 -->
-                    <div onclick="openVideoPlayer('New Project 82 Copy [C7EA011].mp4', 'New Project 82 Copy', '76 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center">
-                            <i class="fas fa-film text-3xl opacity-85 glow-text"></i>
-                            <span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">76 MB</span>
-                        </div>
-                        <div class="my-4">
-                            <div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden">
-                                <div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110">
-                                    <i class="fas fa-play ml-1 glow-text"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1 glow-text">New Project 82 Copy</h3>
-                            <p class="opacity-90 text-xs">Refined video edit with custom pacing and effects.</p>
-                        </div>
-                    </div>
-
-                    <!-- Video 4 -->
-                    <div onclick="openVideoPlayer('New Project 62 [391DC38].mp4', 'New Project 62', '138 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center">
-                            <i class="fas fa-video text-3xl opacity-85 glow-text"></i>
-                            <span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">138 MB</span>
-                        </div>
-                        <div class="my-4">
-                            <div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden">
-                                <div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110">
-                                    <i class="fas fa-play ml-1 glow-text"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1 glow-text">New Project 62</h3>
-                            <p class="opacity-90 text-xs">High-capacity video project featuring immersive scenes.</p>
-                        </div>
-                    </div>
-
-                    <!-- Video 5 -->
-                    <div onclick="openVideoPlayer('New Project 65 [E5FE66C].mp4', 'New Project 65', '35 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center">
-                            <i class="fas fa-film text-3xl opacity-85 glow-text"></i>
-                            <span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">35 MB</span>
-                        </div>
-                        <div class="my-4">
-                            <div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden">
-                                <div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110">
-                                    <i class="fas fa-play ml-1 glow-text"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1 glow-text">New Project 65</h3>
-                            <p class="opacity-90 text-xs">Clean timeline cuts and crisp visual delivery.</p>
-                        </div>
-                    </div>
-
-                    <!-- Video 6 -->
-                    <div onclick="openVideoPlayer('New Project 55 [B937155].mp4', 'New Project 55', '58 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center">
-                            <i class="fas fa-video text-3xl opacity-85 glow-text"></i>
-                            <span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">58 MB</span>
-                        </div>
-                        <div class="my-4">
-                            <div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden">
-                                <div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110">
-                                    <i class="fas fa-play ml-1 glow-text"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1 glow-text">New Project 55</h3>
-                            <p class="opacity-90 text-xs">Structured sequence and optimized layout edit.</p>
-                        </div>
-                    </div>
+                    <a href="https://www.instagram.com/dhckkk?stkn=MTc3bDlzdTlhZXZudg==" target="_blank" class="inline-flex items-center space-x-2 font-semibold text-sm hover:underline glow-text">
+                        <span>Watch Shorts</span> <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
 
-                <!-- Group 2 Kartu Video (Duplikat untuk Infinite Loop) -->
-                <div class="flex gap-6 shrink-0" aria-hidden="true">
-                    <!-- Duplikat Video 1 -->
-                    <div onclick="openVideoPlayer('Video Kelompok 7.mp4', 'Video Kelompok 7', '430 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center"><i class="fas fa-video text-3xl opacity-85 glow-text"></i><span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">430 MB</span></div>
-                        <div class="my-4"><div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden"><div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110"><i class="fas fa-play ml-1 glow-text"></i></div></div></div>
-                        <div><h3 class="text-xl font-bold mb-1 glow-text">Video Kelompok 7</h3><p class="opacity-90 text-xs">Collaborative assignment and presentation video project.</p></div>
+                <div class="p-6 rounded-3xl border-2 card-glow bg-transparent flex flex-col justify-between h-80 transition-all hover:scale-105">
+                    <div class="flex justify-between items-center">
+                        <i class="fas fa-film text-3xl opacity-85 glow-text"></i>
+                        <span class="text-xs uppercase tracking-wider font-bold opacity-70">Long Form</span>
                     </div>
-                    <!-- Duplikat Video 2 -->
-                    <div onclick="openVideoPlayer('New Project 86 [B6AD2B4].mp4', 'New Project 86', '26 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center"><i class="fas fa-film text-3xl opacity-85 glow-text"></i><span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">26 MB</span></div>
-                        <div class="my-4"><div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden"><div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110"><i class="fas fa-play ml-1 glow-text"></i></div></div></div>
-                        <div><h3 class="text-xl font-bold mb-1 glow-text">New Project 86</h3><p class="opacity-90 text-xs">Dynamic cuts, transitions, and visual composition edit.</p></div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 glow-text">Cinematic & Full Video</h3>
+                        <p class="opacity-90 text-sm">Atmospheric storytelling, color grading, and long-duration video projects.</p>
                     </div>
-                    <!-- Duplikat Video 3 -->
-                    <div onclick="openVideoPlayer('New Project 82 Copy [C7EA011].mp4', 'New Project 82 Copy', '76 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center"><i class="fas fa-film text-3xl opacity-85 glow-text"></i><span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">76 MB</span></div>
-                        <div class="my-4"><div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden"><div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110"><i class="fas fa-play ml-1 glow-text"></i></div></div></div>
-                        <div><h3 class="text-xl font-bold mb-1 glow-text">New Project 82 Copy</h3><p class="opacity-90 text-xs">Refined video edit with custom pacing and effects.</p></div>
-                    </div>
-                    <!-- Duplikat Video 4 -->
-                    <div onclick="openVideoPlayer('New Project 62 [391DC38].mp4', 'New Project 62', '138 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center"><i class="fas fa-video text-3xl opacity-85 glow-text"></i><span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">138 MB</span></div>
-                        <div class="my-4"><div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden"><div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110"><i class="fas fa-play ml-1 glow-text"></i></div></div></div>
-                        <div><h3 class="text-xl font-bold mb-1 glow-text">New Project 62</h3><p class="opacity-90 text-xs">High-capacity video project featuring immersive scenes.</p></div>
-                    </div>
-                    <!-- Duplikat Video 5 -->
-                    <div onclick="openVideoPlayer('New Project 65 [E5FE66C].mp4', 'New Project 65', '35 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center"><i class="fas fa-film text-3xl opacity-85 glow-text"></i><span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">35 MB</span></div>
-                        <div class="my-4"><div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden"><div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110"><i class="fas fa-play ml-1 glow-text"></i></div></div></div>
-                        <div><h3 class="text-xl font-bold mb-1 glow-text">New Project 65</h3><p class="opacity-90 text-xs">Clean timeline cuts and crisp visual delivery.</p></div>
-                    </div>
-                    <!-- Duplikat Video 6 -->
-                    <div onclick="openVideoPlayer('New Project 55 [B937155].mp4', 'New Project 55', '58 MB')" class="slider-item w-80 h-[420px] p-6 rounded-3xl border-2 card-glow bg-black/40 backdrop-blur-md flex flex-col justify-between cursor-pointer group">
-                        <div class="flex justify-between items-center"><i class="fas fa-video text-3xl opacity-85 glow-text"></i><span class="text-xs uppercase tracking-wider font-bold px-3 py-1 rounded-full border border-current">58 MB</span></div>
-                        <div class="my-4"><div class="w-full h-40 rounded-2xl border border-white/20 bg-black/60 flex items-center justify-center relative overflow-hidden"><div class="w-14 h-14 rounded-full border-2 card-glow bg-black/80 flex items-center justify-center text-xl transition-transform group-hover:scale-110"><i class="fas fa-play ml-1 glow-text"></i></div></div></div>
-                        <div><h3 class="text-xl font-bold mb-1 glow-text">New Project 55</h3><p class="opacity-90 text-xs">Structured sequence and optimized layout edit.</p></div>
-                    </div>
+                    <a href="https://www.instagram.com/dhckkk?stkn=MTc3bDlzdTlhZXZudg==" target="_blank" class="inline-flex items-center space-x-2 font-semibold text-sm hover:underline glow-text">
+                        <span>Watch Full Video</span> <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
-
             </div>
         </div>
-        <p class="text-xs opacity-60 text-center mt-4">Tip: Klik kartu video untuk membuka halaman pemutar streaming terpisah.</p>
     </section>
 
     <!-- SECTION 4: UI/UX DESIGN (BiFood & Hahay Pay) -->
@@ -626,3 +493,4 @@
     </script>
 </body>
 </html>
+s
