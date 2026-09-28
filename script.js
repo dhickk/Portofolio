@@ -111,17 +111,6 @@
         });
 
         // ==========================================
-        // FUNGSI PEMUTAR VIDEO (PINDAH HALAMAN)
-        // ==========================================
-        function openVideoPlayer(fileName, titleText, fileSizeText) {
-            const encodedFile = encodeURIComponent(fileName);
-            const encodedTitle = encodeURIComponent(titleText);
-            const encodedSize = encodeURIComponent(fileSizeText);
-            
-            window.location.href = `player.html?file=${encodedFile}&title=${encodedTitle}&size=${encodedSize}`;
-        }
-    </script>
-        // ==========================================
         // EFEK JEJAK KURSOR (CURSOR TRAIL BOXES)
         // ==========================================
         const colors = ['#ff0000', '#ffff00', '#00ff00', '#0099ff', '#ffffff', '#ff00ff']; // Merah, Kuning, Hijau, Biru, Putih, Ungu
@@ -149,9 +138,6 @@
         });
         
         // Animasi pergerakan jejak kotak
-        let currentX = 0;
-        let currentY = 0;
-        
         function animateCursorTrail() {
             let x = mouseX;
             let y = mouseY;
@@ -176,3 +162,4 @@
         
         // Jalankan animasi saat halaman dimuat
         animateCursorTrail();
+    </script>
